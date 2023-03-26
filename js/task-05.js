@@ -3,4 +3,7 @@ const span = document.getElementById('name-output');
 
 input.addEventListener('input', (targetInputText) => {
   span.textContent = targetInputText.currentTarget.value;
+  if (targetInputText.currentTarget.value === '') {
+    span.textContent = 'Anonymous';
+  }
 });
